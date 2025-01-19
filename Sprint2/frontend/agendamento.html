@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Clínica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento</h1>
+        <form id="schedule-form">
+            <label for="paciente-nome">Nome do Paciente:</label>
+            <input type="text" id="paciente-nome" name="paciente-nome" required>
+            <label for="procedimento">Procedimento:</label>
+            <select id="procedimento" name="procedimento" required>
+                <option value="consulta">Consulta</option>
+                <option value="exame">Exame</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <label for="data-horario">Data e Horário:</label>
+            <input type="datetime-local" id="data-horario" name="data-horario" required>
+            <button type="submit">Agendar</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
