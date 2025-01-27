@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Clínica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento</h1>
+        <form id="schedule-form">
+            <label for="paciente-nome">Nome do Paciente:</label>
+            <input type="text" id="paciente-nome" name="paciente-nome" pattern="[A-Za-z\s]+" title="Apenas letras e espaços são permitidos" required>
+            <label for="procedimento">Procedimento:</label>
+            <select id="procedimento" name="procedimento" required>
+                <option value="consulta">Consulta</option>
+                <option value="exames">Exames</option>
+                <option value="analise-da-pele">Análise da pele</option>
+                <option value="higienizacao">Higienização</option>
+                <option value="esfoliacao">Esfoliação</option>
+                <option value="vaporizaçao">Vaporização</option>
+                <option value="extracao">Extração</option>
+                <option value="mascara-calmante">Máscara calmante</option>
+                <option value="hidratacao-e-protecao">Hidratação e proteção</option>
+                <option value="gerenciamento-de-melasma">Gerenciamento de melasma</option>
+                <option value="gerenciamento-de-manchas-pos-infalotorias">Gerenciamento de manchas pós-inflamatórias</option>
+                <option value="tratamento-de-cicatriz-de-acne">Tratamento de cicatriz de acne</option>
+                <option value="gerenciamento-de-acne">Gerenciamento de acne</option>
+                <option value="gerenciamento-de-rosacea">Gerenciamento de rosácea</option>
+                <option value="lifting-facial-e-rejuvenescimento-facial">Lifting facial e rejuvenescimento facial</option>
+                <option value="harmonizacao-facial">Harmonização facial</option>
+                <option value="lipoenzimatica-de-papada">Lipoenzimática de papada</option>
+                <option value="gerenciamento-de-alopecia">Gerenciamento de alopecia</option>
+                <option value="gerenciamento-de-gordura-localizada">Gerenciamento de gordura localizada</option>
+                <option value="definicao-abdominal">Definição abdominal</option>
+                <option value="gerenciamento-de-celulite">Gerenciamento de celulite</option>
+                <option value="tratamento-de-estrias">Tratamento de estrias</option>
+                <option value="microvasos">Microvasos</option>
+                <option value="depilacao-a-laser">Depilação a laser</option>
+                <option value="outros-procedimentos">Outros procedimentos</option>
+            </select>
+            <label for="data-horario">Data e Horário:</label>
+            <input type="datetime-local" id="data-horario" name="data-horario" min="2023-01-01T00:00" title="Escolha uma data e horário futuros" required>
+            <button type="submit">Agendar</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

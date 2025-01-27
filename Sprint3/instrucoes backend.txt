@@ -1,0 +1,38 @@
+crie um api em python usando o banco de dados mysql para armazena dados dos formularios acima . ja incluindo crud
+Vamos desenvolver uma API em Python que interaja com um banco de dados MySQL para armazenar os dados dos formulários de agendamento, login e contato. Vamos usar Flask, um microframework em Python, e SQLAlchemy, uma ORM, para facilitar as operações com o banco de dados. Nossa API incluirá operações CRUD (Create, Read, Update, Delete).
+
+Requisitos:
+Instale as dependências necessárias:
+
+pip install Flask SQLAlchemy pymysql flask-marshmallow marshmallow-sqlalchemy
+
+
+Estrutura do Projeto:
+
+project/
+|-- app.py
+|-- config.py
+|-- models.py
+|-- schemas.py
+|-- routes.py
+|-- forms/
+    |-- agendamento.html
+    |-- contato.html
+    |-- ...
+
+
+1. **config.py**: Configuração do banco de dados:
+```python
+import os
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/clinicadb'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+ma = Marshmallow(app)
+
+
