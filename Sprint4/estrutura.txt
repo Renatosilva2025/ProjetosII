@@ -1,0 +1,15 @@
+clinica-estetica/
+│
+├── backend/
+│   ├── app.py (ou manage.py se usar Django)
+│   ├── models.py
+│   ├── requirements.txt
+│   └── database/ (scripts SQL ou configurações do MySQL)
+│
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── assets/ (imagens, ícones, etc.)
+│
+└── README.md (documentação do projeto)
